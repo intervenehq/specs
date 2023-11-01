@@ -15,9 +15,14 @@
     "provider": {
       "type": "string",
       "description": "The provider that this API spec belongs to. Refer to https://docs.nango.dev/integrations/all/accelo for a list of supported providers."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the API spec"
     }
   },
   "required": [
-    "provider"
+    "provider",
+    "title"
   ]
 }
