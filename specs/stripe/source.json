@@ -2,5 +2,6 @@
   "$schema": "../../source-schema.json",
   "openapi": {
     "source": "https://github.com/stripe/openapi/blob/master/openapi/spec3.json"
-  }
+  },
+  "provider": "stripe"
 }

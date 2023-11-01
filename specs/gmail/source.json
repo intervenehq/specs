@@ -2,5 +2,6 @@
   "$schema": "../../source-schema.json",
   "openapi": {
     "source": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/gmail/v1/openapi.yaml"
-  }
+  },
+  "provider": "google-mail"
 }
