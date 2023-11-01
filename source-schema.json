@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "openapi": {
+      "type": "object",
+      "description": "user name",
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "The source URL of the OpenAPI specification. The URL must be publicly accessible and should not require any authentication or additional parameters. It should support GET requests."
+        }
+      }
+    }
+  }
+}
