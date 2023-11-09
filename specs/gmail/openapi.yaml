@@ -113,6 +113,9 @@ paths:
             type: string
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Draft"
           message/cpim:
             schema:
               $ref: "#/components/schemas/Draft"
@@ -224,6 +227,9 @@ paths:
             type: string
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Draft"
           message/cpim:
             schema:
               $ref: "#/components/schemas/Draft"
@@ -431,6 +437,9 @@ paths:
             type: string
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Draft"
           message/cpim:
             schema:
               $ref: "#/components/schemas/Draft"
@@ -972,6 +981,9 @@ paths:
             type: string
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Message"
           message/cpim:
             schema:
               $ref: "#/components/schemas/Message"
@@ -1182,6 +1194,9 @@ paths:
             type: boolean
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Message"
           message/cpim:
             schema:
               $ref: "#/components/schemas/Message"
@@ -1289,6 +1304,9 @@ paths:
             type: string
       requestBody:
         content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Message"
           message/cpim:
             schema:
               $ref: "#/components/schemas/Message"

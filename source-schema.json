@@ -12,9 +12,12 @@
         }
       }
     },
-    "provider": {
-      "type": "string",
-      "description": "The provider that this API spec belongs to. Refer to https://docs.nango.dev/integrations/all/accelo for a list of supported providers."
+    "providers": {
+      "type": "array",
+      "description": "The provider that this API spec belongs to. Refer to https://docs.nango.dev/integrations/all/accelo for a list of supported providers.",
+      "items": {
+        "type": "string"
+      }
     },
     "title": {
       "type": "string",

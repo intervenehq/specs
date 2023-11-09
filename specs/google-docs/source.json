@@ -1,0 +1,8 @@
+{
+  "$schema": "../../source-schema.json",
+  "openapi": {
+    "source": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/docs/v1/openapi.yaml"
+  },
+  "providers": ["google-docs", "google"],
+  "title": "Gmail API"
+}
