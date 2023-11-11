@@ -1,0 +1,179 @@
+openapi: 3.0.0
+info:
+  title: Typeform API
+  description: API for creating and managing Typeform forms.
+  version: "1.0.0"
+servers:
+  - url: https://api.typeform.com/
+paths:
+  /forms:
+    post:
+      summary: Create a new form
+      description: Creates a new form with the given attributes.
+      tags:
+        - Forms
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: Title to use for the form.
+                type:
+                  type: string
+                  description: Type of form to create. Defaults to 'quiz'.
+                  enum:
+                    - quiz
+                    - classification
+                    - score
+                    - branching
+                    - classification_branching
+                    - score_branching
+                settings:
+                  $ref: '#/components/schemas/Settings'
+                cui_settings:
+                  $ref: '#/components/schemas/CuiSettings'
+                theme:
+                  $ref: '#/components/schemas/Theme'
+                workspace:
+                  $ref: '#/components/schemas/Workspace'
+                hidden:
+                  type: array
+                  description: Array of Hidden Fields to use in the form.
+                  items:
+                    type: string
+                variables:
+                  $ref: '#/components/schemas/Variables'
+                welcome_screens:
+                  type: array
+                  description: Settings and properties for the form's welcome screen.
+                  items:
+                    $ref: '#/components/schemas/WelcomeScreens'
+                thankyou_screens:
+                  type: array
+                  description: Settings and properties for the form's thank you screen.
+                  items:
+                    $ref: '#/components/schemas/ThankYouScreens'
+                fields:
+                  type: array
+                  description: Fields to use in the form and their properties, validations, and attachments.
+                  items:
+                    $ref: '#/components/schemas/Fields'
+                logic:
+                  type: array
+                  description: Logic Jump objects to use in the form.
+                  items:
+                    $ref: '#/components/schemas/Logic'
+              example: # The provided example goes here as is
+      responses:
+        '201':
+          description: Form created successfully.
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL where the newly created form is available.
+  /forms/{form_id}:
+    patch:
+      summary: Update an existing form
+      description: Updates an existing form with the given attributes.
+      tags:
+        - Forms
+      parameters:
+        - name: form_id
+          in: path
+          required: true
+          description: Unique ID for the form. Find in your form URL.
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json-patch+json:
+            schema:
+              type: array
+              items:
+                type: object
+                required:
+                  - op
+                  - path
+                  - value
+                properties:
+                  op:
+                    type: string
+                    description: Operation to perform on the form data.
+                    enum:
+                      - replace
+                      - add
+                      - remove
+                  path:
+                    type: string
+                    description: JSON Pointer that points to the field to update.
+                    enum:
+                      - /settings/facebook_pixel
+                      - /settings/google_analytics
+                      - /settings/google_tag_manager
+                      - /settings/is_public
+                      - /settings/meta
+                      - /cui_settings
+                      - /theme
+                      - /title
+                      - /workspace
+                  value:
+                    type: object
+                    description: New value to set for the target field.
+              example: # The provided example goes here as is
+      responses:
+        '204':
+          description: Form updated successfully, no content returned.
+components:
+  schemas:
+    # Define reusable schemas for Settings, CuiSettings, Theme, Workspace, Variables, WelcomeScreens, ThankYouScreens, Fields, Logic here
+    Settings:
+      type: object
+      # Add properties for settings according to the provided attributes and descriptions
+
+    CuiSettings:
+      type: object
+      # Add properties for cui_settings according to the provided attributes and descriptions
+
+    Theme:
+      type: object
+      properties:
+        href:
+          type: string
+          description: URL of the theme to use for the typeform. If not specified, a default theme is applied.
+      required:
+        - href
+
+    Workspace:
+      type: object
+      properties:
+        href:
+          type: string
+          description: URL of the workspace to use for the typeform. If not specified, the form is saved in the default workspace.
+      required:
+        - href
+
+    Variables:
+      type: object
+      # Add properties for variables according to the provided attributes and descriptions
+
+    WelcomeScreens:
+      type: object
+      # Add properties for welcome_screens according to the provided attributes and descriptions
+
+    ThankYouScreens:
+      type: object
+      # Add properties for thankyou_screens according to the provided attributes and descriptions
+
+    Fields:
+      type: object
+      # Add properties for fields according to the provided attributes and descriptions
+
+    Logic:
+      type: object
+      # Add properties for logic according to the provided attributes and descriptions

@@ -1,0 +1,6 @@
+{
+  "$schema": "../../source-schema.json",
+  "openapi": {},
+  "providers": ["typeform"],
+  "title": "Typeform API"
+}
