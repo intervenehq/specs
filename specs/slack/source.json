@@ -1,0 +1,8 @@
+{
+  "$schema": "../../source-schema.json",
+  "openapi": {
+    "source": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/slack.com/1.7.0/openapi.yaml"
+  },
+  "providers": ["slack"],
+  "title": "Slack API"
+}

@@ -22,9 +22,13 @@
     "title": {
       "type": "string",
       "description": "The title of the API spec"
+    },
+    "$schema": {
+      "type": "string"
     }
   },
   "required": [
     "title"
-  ]
+  ],
+  "additionalProperties": false
 }

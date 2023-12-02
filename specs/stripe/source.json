@@ -4,6 +4,5 @@
     "source": "https://github.com/stripe/openapi/blob/master/openapi/spec3.json"
   },
   "providers": ["stripe"],
-  "provider": "stripe",
   "title": "Stripe API"
 }

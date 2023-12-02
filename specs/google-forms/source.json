@@ -4,6 +4,5 @@
     "source": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/googleapis.com/forms/v1/openapi.yaml"
   },
   "providers": ["google", "google-forms"],
-  "provider": "google",
   "title": "Google Forms API"
 }
