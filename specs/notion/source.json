@@ -1,0 +1,8 @@
+{
+  "$schema": "../../source-schema.json",
+  "openapi": {
+    "source": "https://github.com/APIs-guru/openapi-directory/blob/main/APIs/notion.com/1.0.0/openapi.yaml"
+  },
+  "providers": ["notion"],
+  "title": "Notion API"
+}
