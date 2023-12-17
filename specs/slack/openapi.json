@@ -9672,6 +9672,7 @@
         "security": [
           {
             "slackAuth": [
+              "chat:write",
               "chat:write:user",
               "chat:write:bot"
             ]
@@ -9823,6 +9824,7 @@
         "security": [
           {
             "slackAuth": [
+              "chat:write",
               "chat:write:user",
               "chat:write:bot"
             ]
@@ -10123,6 +10125,7 @@
         "security": [
           {
             "slackAuth": [
+              "chat:write",
               "chat:write:user",
               "chat:write:bot"
             ]
@@ -10317,6 +10320,7 @@
         "security": [
           {
             "slackAuth": [
+              "chat:write",
               "chat:write:user",
               "chat:write:bot"
             ]
@@ -10537,6 +10541,7 @@
         "security": [
           {
             "slackAuth": [
+              "chat:write",
               "chat:write:user",
               "chat:write:bot"
             ]
@@ -10797,6 +10802,7 @@
         "security": [
           {
             "slackAuth": [
+              "chat:write",
               "chat:write:user",
               "chat:write:bot"
             ]
@@ -11394,6 +11400,7 @@
         "security": [
           {
             "slackAuth": [
+              "chat:write",
               "chat:write:user",
               "chat:write:bot"
             ]
