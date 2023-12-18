@@ -13117,7 +13117,8 @@
             "in": "query",
             "name": "types",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "default": "public_channel"
             }
           },
           {
