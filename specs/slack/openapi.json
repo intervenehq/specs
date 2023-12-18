@@ -1,4 +1,3 @@
-
 {
   "openapi": "3.0.0",
   "servers": [
@@ -44,17 +43,7 @@
           "url": "https://api.slack.com/methods/admin.apps.approve"
         },
         "operationId": "admin_apps_approve",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.apps:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -158,15 +147,6 @@
         },
         "operationId": "admin_apps_approved_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.apps:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
             "in": "query",
@@ -324,15 +304,6 @@
         },
         "operationId": "admin_apps_requests_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.apps:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
             "in": "query",
@@ -492,17 +463,7 @@
           "url": "https://api.slack.com/methods/admin.apps.restrict"
         },
         "operationId": "admin_apps_restrict",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.apps:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -607,15 +568,6 @@
         "operationId": "admin_apps_restricted_list",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `admin.apps:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "The maximum number of items to return. Must be between 1 - 1000 both inclusive.",
             "in": "query",
             "name": "limit",
@@ -691,7 +643,7 @@
                           },
                           "scopes": [
                             {
-                              "description": "Upload, edit, and delete files on the user‟s behalf",
+                              "description": "Upload, edit, and delete files on the user\u201fs behalf",
                               "is_sensitive": true,
                               "name": "files:write:user",
                               "token_type": "user"
@@ -771,17 +723,7 @@
           "url": "https://api.slack.com/methods/admin.conversations.archive"
         },
         "operationId": "admin_conversations_archive",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -895,17 +837,7 @@
           "url": "https://api.slack.com/methods/admin.conversations.convertToPrivate"
         },
         "operationId": "admin_conversations_convertToPrivate",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -1020,17 +952,7 @@
           "url": "https://api.slack.com/methods/admin.conversations.create"
         },
         "operationId": "admin_conversations_create",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -1165,17 +1087,7 @@
           "url": "https://api.slack.com/methods/admin.conversations.delete"
         },
         "operationId": "admin_conversations_delete",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -1289,17 +1201,7 @@
           "url": "https://api.slack.com/methods/admin.conversations.disconnectShared"
         },
         "operationId": "admin_conversations_disconnectShared",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -1416,22 +1318,13 @@
     },
     "/admin.conversations.ekm.listOriginalConnectedChannelInfo": {
       "get": {
-        "description": "List all disconnected channels—i.e., channels that were once connected to other workspaces and then disconnected—and the corresponding original channel IDs for key revocation with EKM.",
+        "description": "List all disconnected channels\u2014i.e., channels that were once connected to other workspaces and then disconnected\u2014and the corresponding original channel IDs for key revocation with EKM.",
         "externalDocs": {
           "description": "API method documentation",
           "url": "https://api.slack.com/methods/admin.conversations.ekm.listOriginalConnectedChannelInfo"
         },
         "operationId": "admin_conversations_ekm_listOriginalConnectedChannelInfo",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "A comma-separated list of channels to filter to.",
             "in": "query",
@@ -1554,15 +1447,6 @@
         },
         "operationId": "admin_conversations_getConversationPrefs",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "The channel to get preferences for.",
             "in": "query",
@@ -1708,15 +1592,6 @@
         "operationId": "admin_conversations_getTeams",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `admin.conversations:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "The channel to determine connected workspaces within the organization for.",
             "in": "query",
             "name": "channel_id",
@@ -1859,17 +1734,7 @@
           "url": "https://api.slack.com/methods/admin.conversations.invite"
         },
         "operationId": "admin_conversations_invite",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -1987,17 +1852,7 @@
           "url": "https://api.slack.com/methods/admin.conversations.rename"
         },
         "operationId": "admin_conversations_rename",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -2130,14 +1985,9 @@
                   "team_id": {
                     "description": "The workspace where the channel exists. This argument is required for channels only tied to one workspace, and optional for channels that are shared across an organization.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `admin.conversations:write`",
-                    "type": "string"
                   }
                 },
                 "required": [
-                  "token",
                   "group_id",
                   "channel_id"
                 ],
@@ -2228,15 +2078,6 @@
         },
         "operationId": "admin_conversations_restrictAccess_listGroups",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "in": "query",
             "name": "channel_id",
@@ -2353,14 +2194,9 @@
                   "team_id": {
                     "description": "The workspace where the channel exists. This argument is required for channels only tied to one workspace, and optional for channels that are shared across an organization.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `admin.conversations:write`",
-                    "type": "string"
                   }
                 },
                 "required": [
-                  "token",
                   "team_id",
                   "group_id",
                   "channel_id"
@@ -2452,15 +2288,6 @@
         },
         "operationId": "admin_conversations_search",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Comma separated string of team IDs, signifying the workspaces to search through.",
             "in": "query",
@@ -2659,17 +2486,7 @@
           "url": "https://api.slack.com/methods/admin.conversations.setConversationPrefs"
         },
         "operationId": "admin_conversations_setConversationPrefs",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -2788,17 +2605,7 @@
           "url": "https://api.slack.com/methods/admin.conversations.setTeams"
         },
         "operationId": "admin_conversations_setTeams",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -2910,17 +2717,7 @@
           "url": "https://api.slack.com/methods/admin.conversations.unarchive"
         },
         "operationId": "admin_conversations_unarchive",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.conversations:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -3043,17 +2840,12 @@
                     "description": "The name of the emoji to be removed. Colons (`:myemoji:`) around the value are not required, although they may be included.",
                     "type": "string"
                   },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `admin.teams:write`",
-                    "type": "string"
-                  },
                   "url": {
                     "description": "The URL of a file to use as an image for the emoji. Square images under 128KB and with transparent backgrounds work best.",
                     "type": "string"
                   }
                 },
                 "required": [
-                  "token",
                   "name",
                   "url"
                 ],
@@ -3155,14 +2947,9 @@
                   "name": {
                     "description": "The name of the emoji to be aliased. Colons (`:myemoji:`) around the value are not required, although they may be included.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `admin.teams:write`",
-                    "type": "string"
                   }
                 },
                 "required": [
-                  "token",
                   "name",
                   "alias_for"
                 ],
@@ -3253,15 +3040,6 @@
         },
         "operationId": "admin_emoji_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.teams:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page",
             "in": "query",
@@ -3399,14 +3177,9 @@
                   "name": {
                     "description": "The name of the emoji to be removed. Colons (`:myemoji:`) around the value are not required, although they may be included.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `admin.teams:write`",
-                    "type": "string"
                   }
                 },
                 "required": [
-                  "token",
                   "name"
                 ],
                 "type": "object"
@@ -3507,14 +3280,9 @@
                   "new_name": {
                     "description": "The new name of the emoji.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `admin.teams:write`",
-                    "type": "string"
                   }
                 },
                 "required": [
-                  "token",
                   "name",
                   "new_name"
                 ],
@@ -3604,17 +3372,7 @@
           "url": "https://api.slack.com/methods/admin.inviteRequests.approve"
         },
         "operationId": "admin_inviteRequests_approve",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.invites:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "$ref": "#/components/requestBodies/admin_inviteRequests_approve"
         },
@@ -3699,15 +3457,6 @@
         },
         "operationId": "admin_inviteRequests_approved_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.invites:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "ID for the workspace where the invite requests were made.",
             "in": "query",
@@ -3815,15 +3564,6 @@
         "operationId": "admin_inviteRequests_denied_list",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `admin.invites:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "ID for the workspace where the invite requests were made.",
             "in": "query",
             "name": "team_id",
@@ -3928,17 +3668,7 @@
           "url": "https://api.slack.com/methods/admin.inviteRequests.deny"
         },
         "operationId": "admin_inviteRequests_deny",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.invites:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "$ref": "#/components/requestBodies/admin_inviteRequests_approve"
         },
@@ -4023,15 +3753,6 @@
         },
         "operationId": "admin_inviteRequests_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.invites:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "ID for the workspace where the invite requests were made.",
             "in": "query",
@@ -4138,15 +3859,6 @@
         },
         "operationId": "admin_teams_admins_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.teams:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "The maximum number of items to return.",
             "in": "query",
@@ -4255,17 +3967,7 @@
           "url": "https://api.slack.com/methods/admin.teams.create"
         },
         "operationId": "admin_teams_create",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.teams:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -4381,15 +4083,6 @@
         "operationId": "admin_teams_list",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `admin.teams:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "The maximum number of items to return. Must be between 1 - 100 both inclusive.",
             "in": "query",
             "name": "limit",
@@ -4500,15 +4193,6 @@
         "operationId": "admin_teams_owners_list",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `admin.teams:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "in": "query",
             "name": "team_id",
             "required": true,
@@ -4617,15 +4301,6 @@
         },
         "operationId": "admin_teams_settings_info",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.teams:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "in": "query",
             "name": "team_id",
@@ -4737,14 +4412,9 @@
                   "team_id": {
                     "description": "ID for the workspace to set the default channel for.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `admin.teams:write`",
-                    "type": "string"
                   }
                 },
                 "required": [
-                  "token",
                   "team_id",
                   "channel_ids"
                 ],
@@ -4834,17 +4504,7 @@
           "url": "https://api.slack.com/methods/admin.teams.settings.setDescription"
         },
         "operationId": "admin_teams_settings_setDescription",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.teams:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -4949,17 +4609,7 @@
           "url": "https://api.slack.com/methods/admin.teams.settings.setDiscoverability"
         },
         "operationId": "admin_teams_settings_setDiscoverability",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.teams:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -5076,14 +4726,9 @@
                   "team_id": {
                     "description": "ID for the workspace to set the icon for.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `admin.teams:write`",
-                    "type": "string"
                   }
                 },
                 "required": [
-                  "token",
                   "image_url",
                   "team_id"
                 ],
@@ -5173,17 +4818,7 @@
           "url": "https://api.slack.com/methods/admin.teams.settings.setName"
         },
         "operationId": "admin_teams_settings_setName",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.teams:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -5288,17 +4923,7 @@
           "url": "https://api.slack.com/methods/admin.usergroups.addChannels"
         },
         "operationId": "admin_usergroups_addChannels",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.usergroups:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -5407,17 +5032,7 @@
           "url": "https://api.slack.com/methods/admin.usergroups.addTeams"
         },
         "operationId": "admin_usergroups_addTeams",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.teams:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -5527,15 +5142,6 @@
         },
         "operationId": "admin_usergroups_listChannels",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.usergroups:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "ID of the IDP group to list default channels for.",
             "in": "query",
@@ -5667,17 +5273,7 @@
           "url": "https://api.slack.com/methods/admin.usergroups.removeChannels"
         },
         "operationId": "admin_usergroups_removeChannels",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.usergroups:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -5782,17 +5378,7 @@
           "url": "https://api.slack.com/methods/admin.users.assign"
         },
         "operationId": "admin_users_assign",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.users:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -5909,17 +5495,7 @@
           "url": "https://api.slack.com/methods/admin.users.invite"
         },
         "operationId": "admin_users_invite",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.users:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -6055,15 +5631,6 @@
         "operationId": "admin_users_list",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `admin.users:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "The ID (`T1234`) of the workspace.",
             "in": "query",
             "name": "team_id",
@@ -6181,17 +5748,7 @@
           "url": "https://api.slack.com/methods/admin.users.remove"
         },
         "operationId": "admin_users_remove",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.users:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -6296,17 +5853,7 @@
           "url": "https://api.slack.com/methods/admin.users.session.invalidate"
         },
         "operationId": "admin_users_session_invalidate",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.users:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -6410,17 +5957,7 @@
           "url": "https://api.slack.com/methods/admin.users.session.reset"
         },
         "operationId": "admin_users_session_reset",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.users:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -6528,17 +6065,7 @@
           "url": "https://api.slack.com/methods/admin.users.setAdmin"
         },
         "operationId": "admin_users_setAdmin",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.users:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -6643,17 +6170,7 @@
           "url": "https://api.slack.com/methods/admin.users.setExpiration"
         },
         "operationId": "admin_users_setExpiration",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.users:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -6763,17 +6280,7 @@
           "url": "https://api.slack.com/methods/admin.users.setOwner"
         },
         "operationId": "admin_users_setOwner",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.users:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -6878,17 +6385,7 @@
           "url": "https://api.slack.com/methods/admin.users.setRegular"
         },
         "operationId": "admin_users_setRegular",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin.users:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -7103,15 +6600,6 @@
         "operationId": "apps_event_authorizations_list",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `authorizations:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "in": "query",
             "name": "event_context",
             "required": true,
@@ -7220,16 +6708,7 @@
           "url": "https://api.slack.com/methods/apps.permissions.info"
         },
         "operationId": "apps_permissions_info",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "content": {
@@ -7476,15 +6955,6 @@
         "operationId": "apps_permissions_request",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "A comma separated list of scopes to request for",
             "in": "query",
             "name": "scopes",
@@ -7617,15 +7087,6 @@
         },
         "operationId": "apps_permissions_resources_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more detail.",
             "in": "query",
@@ -7811,17 +7272,7 @@
           "url": "https://api.slack.com/methods/apps.permissions.scopes.list"
         },
         "operationId": "apps_permissions_scopes_list",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "content": {
@@ -7985,15 +7436,6 @@
         "operationId": "apps_permissions_users_list",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request's `response_metadata`. Default value fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more detail.",
             "in": "query",
             "name": "cursor",
@@ -8110,15 +7552,6 @@
         "operationId": "apps_permissions_users_request",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "A comma separated list of user scopes to request for",
             "in": "query",
             "name": "scopes",
@@ -8227,14 +7660,6 @@
         },
         "operationId": "apps_uninstall",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Issued when you created your application.",
             "in": "query",
@@ -8365,15 +7790,6 @@
         "operationId": "auth_revoke",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "Setting this parameter to `1` triggers a _testing mode_ where the specified token will not actually be revoked.",
             "in": "query",
             "name": "test",
@@ -8494,17 +7910,7 @@
           "url": "https://api.slack.com/methods/auth.test"
         },
         "operationId": "auth_test",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "content": {
@@ -8640,15 +8046,6 @@
         },
         "operationId": "bots_info",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `users:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Bot user to get info on",
             "in": "query",
@@ -8835,17 +8232,7 @@
           "url": "https://api.slack.com/methods/calls.add"
         },
         "operationId": "calls_add",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `calls:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -8973,17 +8360,7 @@
           "url": "https://api.slack.com/methods/calls.end"
         },
         "operationId": "calls_end",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `calls:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -9088,15 +8465,6 @@
         "operationId": "calls_info",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `calls:read`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "`id` of the Call returned by the [`calls.add`](/methods/calls.add) method.",
             "in": "query",
             "name": "id",
@@ -9185,17 +8553,7 @@
           "url": "https://api.slack.com/methods/calls.participants.add"
         },
         "operationId": "calls_participants_add",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `calls:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -9300,17 +8658,7 @@
           "url": "https://api.slack.com/methods/calls.participants.remove"
         },
         "operationId": "calls_participants_remove",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `calls:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -9415,17 +8763,7 @@
           "url": "https://api.slack.com/methods/calls.update"
         },
         "operationId": "calls_update",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `calls:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -9536,16 +8874,7 @@
           "url": "https://api.slack.com/methods/chat.delete"
         },
         "operationId": "chat_delete",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `chat:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -9691,17 +9020,7 @@
           "url": "https://api.slack.com/methods/chat.deleteScheduledMessage"
         },
         "operationId": "chat_deleteScheduledMessage",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `chat:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -9845,15 +9164,6 @@
         "operationId": "chat_getPermalink",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "The ID of the conversation or channel containing the message",
             "in": "query",
             "name": "channel",
@@ -9992,16 +9302,7 @@
           "url": "https://api.slack.com/methods/chat.meMessage"
         },
         "operationId": "chat_meMessage",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `chat:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -10144,17 +9445,7 @@
           "url": "https://api.slack.com/methods/chat.postEphemeral"
         },
         "operationId": "chat_postEphemeral",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `chat:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -10339,17 +9630,7 @@
           "url": "https://api.slack.com/methods/chat.postMessage"
         },
         "operationId": "chat_postMessage",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `chat:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -10560,16 +9841,7 @@
           "url": "https://api.slack.com/methods/chat.scheduleMessage"
         },
         "operationId": "chat_scheduleMessage",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `chat:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -10823,14 +10095,6 @@
         "operationId": "chat_scheduledMessages_list",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "The channel of the scheduled messages",
             "in": "query",
             "name": "channel",
@@ -11041,17 +10305,7 @@
           "url": "https://api.slack.com/methods/chat.unfurl"
         },
         "operationId": "chat_unfurl",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `links:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -11204,17 +10458,7 @@
           "url": "https://api.slack.com/methods/chat.update"
         },
         "operationId": "chat_update",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `chat:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -11419,16 +10663,7 @@
           "url": "https://api.slack.com/methods/conversations.archive"
         },
         "operationId": "conversations_archive",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -11568,16 +10803,7 @@
           "url": "https://api.slack.com/methods/conversations.close"
         },
         "operationId": "conversations_close",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -11715,16 +10941,7 @@
           "url": "https://api.slack.com/methods/conversations.create"
         },
         "operationId": "conversations_create",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -11913,14 +11130,6 @@
         },
         "operationId": "conversations_history",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:history`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Conversation ID to fetch history for.",
             "in": "query",
@@ -12140,14 +11349,6 @@
         "operationId": "conversations_info",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `conversations:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "Conversation ID to learn more about",
             "in": "query",
             "name": "channel",
@@ -12330,16 +11531,7 @@
           "url": "https://api.slack.com/methods/conversations.invite"
         },
         "operationId": "conversations_invite",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -12589,16 +11781,7 @@
           "url": "https://api.slack.com/methods/conversations.join"
         },
         "operationId": "conversations_join",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `channels:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -12791,16 +11974,7 @@
           "url": "https://api.slack.com/methods/conversations.kick"
         },
         "operationId": "conversations_kick",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -12941,16 +12115,7 @@
           "url": "https://api.slack.com/methods/conversations.leave"
         },
         "operationId": "conversations_leave",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -13096,14 +12261,6 @@
         },
         "operationId": "conversations_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Set to `true` to exclude archived channels from the list",
             "in": "query",
@@ -13341,16 +12498,7 @@
           "url": "https://api.slack.com/methods/conversations.mark"
         },
         "operationId": "conversations_mark",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -13488,14 +12636,6 @@
         },
         "operationId": "conversations_members",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "ID of the conversation to retrieve members for",
             "in": "query",
@@ -13661,16 +12801,7 @@
           "url": "https://api.slack.com/methods/conversations.open"
         },
         "operationId": "conversations_open",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -13864,16 +12995,7 @@
           "url": "https://api.slack.com/methods/conversations.rename"
         },
         "operationId": "conversations_rename",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -14061,14 +13183,6 @@
         },
         "operationId": "conversations_replies",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:history`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Conversation ID to fetch thread from.",
             "in": "query",
@@ -14409,16 +13523,7 @@
           "url": "https://api.slack.com/methods/conversations.setPurpose"
         },
         "operationId": "conversations_setPurpose",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -14561,16 +13666,7 @@
           "url": "https://api.slack.com/methods/conversations.setTopic"
         },
         "operationId": "conversations_setTopic",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -14713,16 +13809,7 @@
           "url": "https://api.slack.com/methods/conversations.unarchive"
         },
         "operationId": "conversations_unarchive",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -14861,15 +13948,6 @@
         "operationId": "dialog_open",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "The dialog definition. This must be a JSON-encoded string.",
             "in": "query",
             "name": "dialog",
@@ -15004,17 +14082,7 @@
           "url": "https://api.slack.com/methods/dnd.endDnd"
         },
         "operationId": "dnd_endDnd",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `dnd:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "content": {
@@ -15124,17 +14192,7 @@
           "url": "https://api.slack.com/methods/dnd.endSnooze"
         },
         "operationId": "dnd_endSnooze",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `dnd:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "content": {
@@ -15262,14 +14320,6 @@
         },
         "operationId": "dnd_info",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `dnd:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "User to fetch status for (defaults to current user)",
             "in": "query",
@@ -15416,14 +14466,9 @@
                   "num_minutes": {
                     "description": "Number of minutes, from now, to snooze until.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `dnd:write`",
-                    "type": "string"
                   }
                 },
                 "required": [
-                  "token",
                   "num_minutes"
                 ],
                 "type": "object"
@@ -15557,14 +14602,6 @@
         "operationId": "dnd_teamInfo",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `dnd:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "Comma-separated list of users to fetch Do Not Disturb status for",
             "in": "query",
             "name": "users",
@@ -15664,17 +14701,7 @@
           "url": "https://api.slack.com/methods/emoji.list"
         },
         "operationId": "emoji_list",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `emoji:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "content": {
@@ -15754,16 +14781,7 @@
           "url": "https://api.slack.com/methods/files.comments.delete"
         },
         "operationId": "files_comments_delete",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `files:write:user`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -15889,16 +14907,7 @@
           "url": "https://api.slack.com/methods/files.delete"
         },
         "operationId": "files_delete",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `files:write:user`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -16022,14 +15031,6 @@
         },
         "operationId": "files_info",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `files:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Specify a file by providing its ID.",
             "in": "query",
@@ -16263,14 +15264,6 @@
         },
         "operationId": "files_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `files:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Filter files created by a single user.",
             "in": "query",
@@ -16574,10 +15567,6 @@
                   "title": {
                     "description": "Title of the file being shared.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `remote_files:write`",
-                    "type": "string"
                   }
                 },
                 "type": "object"
@@ -16666,14 +15655,6 @@
         },
         "operationId": "files_remote_info",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `remote_files:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Specify a file by providing its ID.",
             "in": "query",
@@ -16772,14 +15753,6 @@
         },
         "operationId": "files_remote_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `remote_files:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Filter files appearing in a specific channel, indicated by its ID.",
             "in": "query",
@@ -16913,10 +15886,6 @@
                   "file": {
                     "description": "Specify a file by providing its ID.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `remote_files:write`",
-                    "type": "string"
                   }
                 },
                 "type": "object"
@@ -17005,14 +15974,6 @@
         },
         "operationId": "files_remote_share",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `remote_files:share`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Specify a file registered with Slack by providing its ID. Either this field or `external_id` or both are required.",
             "in": "query",
@@ -17150,10 +16111,6 @@
                   "title": {
                     "description": "Title of the file being shared.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `remote_files:write`",
-                    "type": "string"
                   }
                 },
                 "type": "object"
@@ -17241,16 +16198,7 @@
           "url": "https://api.slack.com/methods/files.revokePublicURL"
         },
         "operationId": "files_revokePublicURL",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `files:write:user`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -17380,16 +16328,7 @@
           "url": "https://api.slack.com/methods/files.sharedPublicURL"
         },
         "operationId": "files_sharedPublicURL",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `files:write:user`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -17555,10 +16494,6 @@
                   },
                   "title": {
                     "description": "Title of file.",
-                    "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `files:write:user`",
                     "type": "string"
                   }
                 },
@@ -17737,15 +16672,6 @@
         },
         "operationId": "migration_exchange",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `tokens.basic`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "A comma-separated list of user ids, up to 400 per request",
             "in": "query",
@@ -18313,17 +17239,7 @@
           "url": "https://api.slack.com/methods/pins.add"
         },
         "operationId": "pins_add",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `pins:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -18460,15 +17376,6 @@
         },
         "operationId": "pins_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `pins:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Channel to get pinned items for.",
             "in": "query",
@@ -18696,17 +17603,7 @@
           "url": "https://api.slack.com/methods/pins.remove"
         },
         "operationId": "pins_remove",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `pins:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -18841,17 +17738,7 @@
           "url": "https://api.slack.com/methods/reactions.add"
         },
         "operationId": "reactions_add",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `reactions:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -18993,15 +17880,6 @@
         },
         "operationId": "reactions_get",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `reactions:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Channel where the message to get reactions for was posted.",
             "in": "query",
@@ -19245,15 +18123,6 @@
         },
         "operationId": "reactions_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `reactions:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Show reactions made by this user. Defaults to the authed user.",
             "in": "query",
@@ -19576,17 +18445,7 @@
           "url": "https://api.slack.com/methods/reactions.remove"
         },
         "operationId": "reactions_remove",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `reactions:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -19734,17 +18593,7 @@
           "url": "https://api.slack.com/methods/reminders.add"
         },
         "operationId": "reminders_add",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `reminders:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -19891,16 +18740,7 @@
           "url": "https://api.slack.com/methods/reminders.complete"
         },
         "operationId": "reminders_complete",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `reminders:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -20027,16 +18867,7 @@
           "url": "https://api.slack.com/methods/reminders.delete"
         },
         "operationId": "reminders_delete",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `reminders:write`",
-            "in": "header",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -20163,14 +18994,6 @@
         "operationId": "reminders_info",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `reminders:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "The ID of the reminder",
             "in": "query",
             "name": "reminder",
@@ -20292,16 +19115,7 @@
           "url": "https://api.slack.com/methods/reminders.list"
         },
         "operationId": "reminders_list",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `reminders:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "content": {
@@ -20418,15 +19232,6 @@
         },
         "operationId": "rtm_connect",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `rtm:stream`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events. See [batch presence](/docs/presence-and-status#batching).",
             "in": "query",
@@ -20604,15 +19409,6 @@
         },
         "operationId": "search_messages",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `search:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Pass the number of results you want per \"page\". Maximum of `100`.",
             "in": "query",
@@ -20803,17 +19599,7 @@
           "url": "https://api.slack.com/methods/stars.add"
         },
         "operationId": "stars_add",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `stars:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -20956,14 +19742,6 @@
         },
         "operationId": "stars_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `stars:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "in": "query",
             "name": "count",
@@ -21262,17 +20040,7 @@
           "url": "https://api.slack.com/methods/stars.remove"
         },
         "operationId": "stars_remove",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `stars:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -21415,15 +20183,6 @@
         },
         "operationId": "team_accessLogs",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `admin`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "End of time range of logs to include in results (inclusive).",
             "in": "query",
@@ -21653,15 +20412,6 @@
         "operationId": "team_billableInfo",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `admin`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "A user to retrieve the billable information for. Defaults to all users.",
             "in": "query",
             "name": "user",
@@ -21761,15 +20511,6 @@
         },
         "operationId": "team_info",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `team:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Team to get info on, if omitted, will return information about the current team. Will only return team that the authenticated token is allowed to see through external shared channels",
             "in": "query",
@@ -21908,15 +20649,6 @@
         "operationId": "team_integrationLogs",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `admin`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "Filter logs to this Slack app. Defaults to all logs.",
             "in": "query",
             "name": "app_id",
@@ -21955,7 +20687,7 @@
             }
           },
           {
-            "description": "Filter logs generated by this user’s actions. Defaults to all logs.",
+            "description": "Filter logs generated by this user\u2019s actions. Defaults to all logs.",
             "in": "query",
             "name": "user",
             "schema": {
@@ -22130,15 +20862,6 @@
         },
         "operationId": "team_profile_get",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `users.profile:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Filter by visibility.",
             "in": "query",
@@ -22337,17 +21060,7 @@
           "url": "https://api.slack.com/methods/usergroups.create"
         },
         "operationId": "usergroups_create",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `usergroups:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -22496,17 +21209,7 @@
           "url": "https://api.slack.com/methods/usergroups.disable"
         },
         "operationId": "usergroups_disable",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `usergroups:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -22643,17 +21346,7 @@
           "url": "https://api.slack.com/methods/usergroups.enable"
         },
         "operationId": "usergroups_enable",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `usergroups:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -22798,15 +21491,6 @@
             "name": "include_users",
             "schema": {
               "type": "boolean"
-            }
-          },
-          {
-            "description": "Authentication token. Requires scope: `usergroups:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
             }
           },
           {
@@ -23009,17 +21693,7 @@
           "url": "https://api.slack.com/methods/usergroups.update"
         },
         "operationId": "usergroups_update",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `usergroups:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -23201,15 +21875,6 @@
         "operationId": "usergroups_users_list",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `usergroups:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "Allow results that involve disabled User Groups.",
             "in": "query",
             "name": "include_disabled",
@@ -23350,17 +22015,7 @@
           "url": "https://api.slack.com/methods/usergroups.users.update"
         },
         "operationId": "usergroups_users_update",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `usergroups:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -23531,14 +22186,6 @@
         },
         "operationId": "users_conversations",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `conversations:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Browse conversations by a specific user ID's membership. Non-public channels are restricted to those where the calling user shares membership.",
             "in": "query",
@@ -23785,15 +22432,7 @@
           "content": {
             "application/x-www-form-urlencoded": {
               "schema": {
-                "properties": {
-                  "token": {
-                    "description": "Authentication token. Requires scope: `users.profile:write`",
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "token"
-                ],
+                "properties": {},
                 "type": "object"
               }
             }
@@ -23910,15 +22549,6 @@
         "operationId": "users_getPresence",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `users:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "User to get presence info on. Defaults to the authed user.",
             "in": "query",
             "name": "user",
@@ -24032,16 +22662,7 @@
           "url": "https://api.slack.com/methods/users.identity"
         },
         "operationId": "users_identity",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `identity.basic`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "content": {
@@ -24407,15 +23028,6 @@
         "operationId": "users_info",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `users:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "Set this to `true` to receive the locale for this user. Defaults to `false`",
             "in": "query",
             "name": "include_locale",
@@ -24579,14 +23191,6 @@
         },
         "operationId": "users_list",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `users:read`",
-            "in": "query",
-            "name": "token",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached. Providing no `limit` value will result in Slack attempting to deliver you the entire result set. If the collection is too large you may experience `limit_required` or HTTP 500 errors.",
             "in": "query",
@@ -24820,15 +23424,6 @@
         "operationId": "users_lookupByEmail",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `users:read.email`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "An email address belonging to a user in the workspace",
             "in": "query",
             "name": "email",
@@ -24988,15 +23583,6 @@
         "operationId": "users_profile_get",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `users.profile:read`",
-            "in": "query",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "Include labels for each ID in custom profile fields",
             "in": "query",
             "name": "include_labels",
@@ -25146,17 +23732,7 @@
           "url": "https://api.slack.com/methods/users.profile.set"
         },
         "operationId": "users_profile_set",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `users.profile:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -25329,17 +23905,7 @@
           "url": "https://api.slack.com/methods/users.setActive"
         },
         "operationId": "users_setActive",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `users:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "content": {
@@ -25467,15 +24033,8 @@
                   "image": {
                     "description": "File contents via `multipart/form-data`.",
                     "type": "string"
-                  },
-                  "token": {
-                    "description": "Authentication token. Requires scope: `users.profile:write`",
-                    "type": "string"
                   }
                 },
-                "required": [
-                  "token"
-                ],
                 "type": "object"
               }
             }
@@ -25660,17 +24219,7 @@
           "url": "https://api.slack.com/methods/users.setPresence"
         },
         "operationId": "users_setPresence",
-        "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `users:write`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        "parameters": [],
         "requestBody": {
           "content": {
             "application/x-www-form-urlencoded": {
@@ -25799,15 +24348,6 @@
         },
         "operationId": "views_open",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Exchange a trigger to post to the user.",
             "in": "query",
@@ -25954,15 +24494,6 @@
         "operationId": "views_publish",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "`id` of the user you want publish a view to.",
             "in": "query",
             "name": "user_id",
@@ -26105,15 +24636,6 @@
         },
         "operationId": "views_push",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Exchange a trigger to post to the user.",
             "in": "query",
@@ -26265,15 +24787,6 @@
         },
         "operationId": "views_update",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `none`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "A unique identifier of the view to be updated. Either `view_id` or `external_id` is required.",
             "in": "query",
@@ -26436,15 +24949,6 @@
         "operationId": "workflows_stepCompleted",
         "parameters": [
           {
-            "description": "Authentication token. Requires scope: `workflow.steps:execute`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "description": "Context identifier that maps to the correct workflow step execution.",
             "in": "query",
             "name": "workflow_step_execute_id",
@@ -26542,15 +25046,6 @@
         },
         "operationId": "workflows_stepFailed",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `workflow.steps:execute`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "Context identifier that maps to the correct workflow step execution.",
             "in": "query",
@@ -26650,15 +25145,6 @@
         },
         "operationId": "workflows_updateStep",
         "parameters": [
-          {
-            "description": "Authentication token. Requires scope: `workflow.steps:execute`",
-            "in": "header",
-            "name": "token",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "description": "A context identifier provided with `view_submission` payloads used to call back to `workflows.updateStep`.",
             "in": "query",
